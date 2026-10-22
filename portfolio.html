@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Richmond Dorh — Personal Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script><!-- Google Fonts Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for minimal icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-zinc-50 text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100 transition-colors duration-300 min-h-screen flex flex-col justify-between">
+
+    <header class="sticky top-0 z-50 bg-zinc-50/80 dark:bg-zinc-950/80 backdrop-blur-md border-b border-zinc-200 dark:border-zinc-800 transition-colors">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#hero" class="flex items-center space-x-3 group">
+                <div class="w-9 h-9 rounded-lg bg-zinc-900 dark:bg-zinc-100 text-zinc-50 dark:text-zinc-900 flex items-center justify-center font-bold text-sm tracking-tighter">
+                    RD
+                </div>
+                <span class="font-semibold text-sm tracking-tight text-zinc-800 dark:text-zinc-200">Richmond Dorh</span>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-zinc-600 dark:text-zinc-400">
+                <a href="#about" class="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">About</a>
+                <a href="#skills" class="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">Skills</a>
+                <a href="#projects" class="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">Projects</a>
+                <a href="#education" class="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">Education</a>
+                <a href="#contact" class="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">Contact</a>
+            </nav>
+
+            <!-- Actions: Dark Mode & Mobile Toggle -->
+            <div class="flex items-center space-x-3">
+                <button id="darkModeToggle" aria-label="Toggle Dark Mode" class="p-2.5 rounded-lg text-zinc-600 dark:text-zinc-400 hover:bg-zinc-200/60 dark:hover:bg-zinc-800/60 transition-colors">
+                    <i id="themeIcon" class="fa-solid fa-moon text-sm"></i>
+                </button>
+                <button id="mobileMenuButton" aria-label="Toggle Mobile Menu" class="md:hidden p-2.5 rounded-lg text-zinc-600 dark:text-zinc-400 hover:bg-zinc-200/60 dark:hover:bg-zinc-800/60 transition-colors">
+                    <i id="menuIcon" class="fa-solid fa-bars text-sm"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-zinc-50 dark:bg-zinc-950 border-b border-zinc-200 dark:border-zinc-800 px-6 py-4 space-y-3">
+            <a href="#about" class="mobile-link block text-sm font-medium text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100">About</a>
+            <a href="#skills" class="mobile-link block text-sm font-medium text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100">Skills</a>
+            <a href="#projects" class="mobile-link block text-sm font-medium text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100">Projects</a>
+            <a href="#education" class="mobile-link block text-sm font-medium text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100">Education</a>
+            <a href="#contact" class="mobile-link block text-sm font-medium text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100">Contact</a>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+
+        <section id="hero" class="py-24 md:py-32 max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+                <div class="md:col-span-7 space-y-6">
+                    <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-zinc-200/60 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 text-xs font-medium">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                        <span>Available for select projects</span>
+                    </div>
+                    <h1 class="text-4xl md:text-6xl font-light tracking-tight text-zinc-900 dark:text-zinc-100 leading-tight">
+                        Web Development/ UI & Software Engineering 
+                    </h1>
+                    <p class="text-zinc-600 dark:text-zinc-400 text-base md:text-lg max-w-xl font-light leading-relaxed">
+                        I'm Richmond, a full-stack software engineer focused on building clean, high-performance web applications and thoughtful user interfaces.
+                    </p>
+                    <div class="flex items-center space-x-4 pt-2">
+                        <a href="#projects" class="px-6 py-3 rounded-lg bg-zinc-900 text-zinc-50 dark:bg-zinc-100 dark:text-zinc-900 text-sm font-medium hover:opacity-90 transition-opacity">
+                            View Work
+                        </a>
+                        <a href="#contact" class="px-6 py-3 rounded-lg border border-zinc-300 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 text-sm font-medium hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-colors">
+                            Get in Touch
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Profile Image & Upload Card -->
+                <div class="md:col-span-5 flex flex-col items-center">
+                    <div class="w-64 h-64 md:w-72 md:h-72 rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-900 shadow-sm relative group">
+                        <img src ="profile pic new.jpg" src="https://placehold.co/400x400/27272a/f4f4f5?text=RD" alt="profile picture" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/400x400/27272a/f4f4f5?text=RD">
+                    </div>
+                    <div class="mt-4 w-64 md:w-72 text-center">
+                        <label for="imageUploadInput" class="cursor-pointer inline-flex items-center justify-center space-x-2 text-xs font-medium text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">
+                            <i"></i>
+                        </label>
+                        <input type="file" id="imageUploadInput" accept="image/*" class="hidden">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-24 border-t border-zinc-200 dark:border-zinc-800/60">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="max-w-2xl mb-16">
+                    <h2 class="text-xs uppercase tracking-widest text-zinc-400 dark:text-zinc-500 font-semibold mb-3">About Me</h2>
+                    <p class="text-2xl md:text-3xl font-light text-zinc-900 dark:text-zinc-100 leading-snug">
+                        Simplicity is the ultimate sophistication. I build web architectures that prioritize clarity, speed, and usability.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="p-6 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/50">
+                        <div class="text-zinc-900 dark:text-zinc-100 font-medium mb-2">Frontend Focus</div>
+                        <p class="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed font-light">Building responsive, accessible interfaces using semantic HTML, Tailwind CSS, and modern JavaScript frameworks.</p>
+                    </div>
+                    <div class="p-6 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/50">
+                        <div class="text-zinc-900 dark:text-zinc-100 font-medium mb-2">Backend Integrity</div>
+                        <p class="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed font-light">Designing secure RESTful APIs,and Python.</p>
+                    </div>
+                    <div class="p-6 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/50">
+                        <div class="text-zinc-900 dark:text-zinc-100 font-medium mb-2">Design Philosophy</div>
+                        <p class="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed font-light">Eliminating unnecessary complexity to deliver clean codebases that are maintainable and high-performing.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="py-24 border-t border-zinc-200 dark:border-zinc-800/60">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="max-w-2xl mb-12">
+                    <h2 class="text-xs uppercase tracking-widest text-zinc-400 dark:text-zinc-500 font-semibold mb-3">Expertise</h2>
+                    <p class="text-2xl md:text-3xl font-light text-zinc-900 dark:text-zinc-100">Core technologies & tools</p>
+                </div>
+                <div class="flex flex-wrap gap-2.5">
+                    <span class="px-4 py-2 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-xs font-medium text-zinc-700 dark:text-zinc-300">HTML5 / CSS3</span>
+                    <span class="px-4 py-2 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-xs font-medium text-zinc-700 dark:text-zinc-300">Tailwind CSS</span>
+                    <span class="px-4 py-2 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-xs font-medium text-zinc-700 dark:text-zinc-300">JavaScript (ES6+)</span>
+                    <span class="px-4 py-2 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-xs font-medium text-zinc-700 dark:text-zinc-300">React.js</span>
+                    <span class="px-4 py-2 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-xs font-medium text-zinc-700 dark:text-zinc-300">Node.js</span>
+                    <span class="px-4 py-2 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-xs font-medium text-zinc-700 dark:text-zinc-300">Python / FastAPI</span>
+                    <span class="px-4 py-2 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-xs font-medium text-zinc-700 dark:text-zinc-300">PostgreSQL</span>
+                    <span class="px-4 py-2 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-xs font-medium text-zinc-700 dark:text-zinc-300">Git & GitHub</span>
+                    <span class="px-4 py-2 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-xs font-medium text-zinc-700 dark:text-zinc-300">Docker</span>
+                    <span class="px-4 py-2 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-xs font-medium text-zinc-700 dark:text-zinc-300">Figma UI/UX</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="py-24 border-t border-zinc-200 dark:border-zinc-800/60">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="max-w-2xl mb-12">
+                    <h2 class="text-xs uppercase tracking-widest text-zinc-400 dark:text-zinc-500 font-semibold mb-3">Portfolio</h2>
+                    <p class="text-2xl md:text-3xl font-light text-zinc-900 dark:text-zinc-100">Featured projects</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Project 1 -->
+                    <div class="group rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/40 p-6 flex flex-col justify-between transition-all hover:border-zinc-400 dark:hover:border-zinc-600">
+                        <div>
+                            <div class="h-48 rounded-lg overflow-hidden bg-zinc-100 dark:bg-zinc-800 mb-6">
+                                <img src="https://placehold.co/600x400/27272a/f4f4f5?text=E-Commerce+Platform" alt="Project" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <h3 class="text-lg font-medium text-zinc-900 dark:text-zinc-100 mb-2">Nexus E-Commerce</h3>
+                            <p class="text-sm text-zinc-600 dark:text-zinc-400 font-light leading-relaxed mb-6">A high-performance online shopping platform featuring secure user authentication, Stripe payment gateway, and a streamlined checkout experience.</p>
+                        </div>
+                        <div class="flex items-center justify-between border-t border-zinc-100 dark:border-zinc-800 pt-4">
+                            <span class="text-xs text-zinc-400">React · Node.js · Tailwind</span>
+                            <a href="#contact" class="text-xs font-medium text-zinc-900 dark:text-zinc-100 hover:underline inline-flex items-center space-x-1">
+                                <span>Explore</span>
+                                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="group rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/40 p-6 flex flex-col justify-between transition-all hover:border-zinc-400 dark:hover:border-zinc-600">
+                        <div>
+                            <div class="h-48 rounded-lg overflow-hidden bg-zinc-100 dark:bg-zinc-800 mb-6">
+                                <img src="https://placehold.co/600x400/27272a/f4f4f5?text=Task+Management+App" alt="Project" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <h3 class="text-lg font-medium text-zinc-900 dark:text-zinc-100 mb-2">TaskFlow Kanban</h3>
+                            <p class="text-sm text-zinc-600 dark:text-zinc-400 font-light leading-relaxed mb-6">An intuitive task management board with drag-and-drop workflow capability, real-time status updates, and clean minimalistic UI.</p>
+                        </div>
+                        <div class="flex items-center justify-between border-t border-zinc-100 dark:border-zinc-800 pt-4">
+                            <span class="text-xs text-zinc-400">JavaScript · Tailwind</span>
+                            <a href="#contact" class="text-xs font-medium text-zinc-900 dark:text-zinc-100 hover:underline inline-flex items-center space-x-1">
+                                <span>Explore</span>
+                                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="py-24 border-t border-zinc-200 dark:border-zinc-800/60">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="max-w-2xl mb-12">
+                    <h2 class="text-xs uppercase tracking-widest text-zinc-400 dark:text-zinc-500 font-semibold mb-3">Credentials</h2>
+                    <p class="text-2xl md:text-3xl font-light text-zinc-900 dark:text-zinc-100">Education & Background</p>
+                </div>
+                <div class="overflow-x-auto rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/40">
+                    <table class="w-full text-left text-sm border-collapse">
+                        <thead>
+                            <tr class="border-b border-zinc-200 dark:border-zinc-800 text-zinc-400 dark:text-zinc-500 font-medium text-xs uppercase tracking-wider">
+                                <th class="py-4 px-6">Degree / Certification</th>
+                                <th class="py-4 px-6">Institution</th>
+                                <th class="py-4 px-6">Year</th>
+                                <th class="py-4 px-6">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-zinc-200 dark:divide-zinc-800 font-light text-zinc-700 dark:text-zinc-300">
+                            <tr>
+                                <td class="py-4 px-6 font-medium text-zinc-900 dark:text-zinc-100">Software Engineering & UI Design</td>
+                                <td class="py-4 px-6">Codetrain Africa</td>
+                                <td class="py-4 px-6">2026 – Date</td>
+                                <td class="py-4 px-6"><span class="text-emerald-600 dark:text-emerald-400 text-xs font-medium">Active</span></td>
+                            </tr>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-24 border-t border-zinc-200 dark:border-zinc-800/60">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="max-w-2xl mb-12">
+                    <h2 class="text-xs uppercase tracking-widest text-zinc-400 dark:text-zinc-500 font-semibold mb-3">Contact</h2>
+                    <p class="text-2xl md:text-3xl font-light text-zinc-900 dark:text-zinc-100">Let's work together</p>
+                </div>
+
+                <div class="max-w-xl bg-white dark:bg-zinc-900/50 rounded-2xl border border-zinc-200 dark:border-zinc-800 p-8">
+                    <div id="formFeedback" class="hidden mb-6 p-4 rounded-lg text-xs font-medium"></div>
+
+                    <form id="contactForm" class="space-y-5" novalidate>
+                        <div>
+                            <label for="name" class="block text-xs font-medium text-zinc-600 dark:text-zinc-400 mb-2">Name</label>
+                            <input type="text" id="name" placeholder="Kwame Arthur" class="w-full px-4 py-3 rounded-lg bg-zinc-50 dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 text-zinc-900 dark:text-zinc-100 text-sm focus:outline-none focus:border-zinc-400 dark:focus:border-zinc-600 transition-colors">
+                            <p id="nameError" class="mt-1 text-xs text-rose-500 hidden"></p>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-xs font-medium text-zinc-600 dark:text-zinc-400 mb-2">Email</label>
+                            <input type="email" id="email" placeholder="kwame@example.com" class="w-full px-4 py-3 rounded-lg bg-zinc-50 dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 text-zinc-900 dark:text-zinc-100 text-sm focus:outline-none focus:border-zinc-400 dark:focus:border-zinc-600 transition-colors">
+                            <p id="emailError" class="mt-1 text-xs text-rose-500 hidden"></p>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-xs font-medium text-zinc-600 dark:text-zinc-400 mb-2">Message</label>
+                            <textarea id="message" rows="4" placeholder="Tell me about your project..." class="w-full px-4 py-3 rounded-lg bg-zinc-50 dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 text-zinc-900 dark:text-zinc-100 text-sm focus:outline-none focus:border-zinc-400 dark:focus:border-zinc-600 transition-colors"></textarea>
+                            <p id="messageError" class="mt-1 text-xs text-rose-500 hidden"></p>
+                        </div>
+                        <button type="submit" class="w-full py-3 rounded-lg bg-zinc-900 text-zinc-50 dark:bg-zinc-100 dark:text-zinc-900 text-sm font-medium hover:opacity-90 transition-opacity">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="border-t border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-950 py-12">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-light text-zinc-500">
+            <div>
+                &copy; <span id="currentYear"></span> . All right Richmond Dorh reserved.
+            </div>
+            <div class="flex items-center space-x-6">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"><i class="fa-brands fa-github text-sm"></i></a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"><i class="fa-brands fa-linkedin-in text-sm"></i></a>
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"><i class="fa-brands fa-twitter text-sm"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Dynamic Footer Year
+            const yearSpan = document.getElementById('currentYear');
+            if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+
+            // Dark Mode Toggle & Persistence
+            const darkModeToggle = document.getElementById('darkModeToggle');
+            const themeIcon = document.getElementById('themeIcon');
+            const htmlElement = document.documentElement;
+
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                htmlElement.classList.add('dark');
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+            }
+
+            darkModeToggle.addEventListener('click', () => {
+                htmlElement.classList.toggle('dark');
+                if (htmlElement.classList.contains('dark')) {
+                    localStorage.setItem('theme', 'dark');
+                    themeIcon.classList.remove('fa-moon');
+                    themeIcon.classList.add('fa-sun');
+                } else {
+                    localStorage.setItem('theme', 'light');
+                    themeIcon.classList.remove('fa-sun');
+                    themeIcon.classList.add('fa-moon');
+                }
+            });
+
+            // Mobile Menu Toggle
+            const mobileMenuButton = document.getElementById('mobileMenuButton');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const menuIcon = document.getElementById('menuIcon');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                menuIcon.classList.toggle('fa-bars');
+                menuIcon.classList.toggle('fa-xmark');
+            });
+
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    menuIcon.classList.remove('fa-xmark');
+                    menuIcon.classList.add('fa-bars');
+                });
+            });
+
+            // Profile Image Upload & Preview
+            const imageUploadInput = document.getElementById('imageUploadInput');
+            const profilePreviewImg = document.getElementById('profilePreviewImg');
+
+            imageUploadInput.addEventListener('change', (e) => {
+                const file = e.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = (event) => {
+                        profilePreviewImg.src = event.target.result;
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+
+            // Contact Form Validation
+            const contactForm = document.getElementById('contactForm');
+            const formFeedback = document.getElementById('formFeedback');
+            const nameInput = document.getElementById('name');
+            const emailInput = document.getElementById('email');
+            const messageInput = document.getElementById('message');
+
+            const nameError = document.getElementById('nameError');
+            const emailError = document.getElementById('emailError');
+            const messageError = document.getElementById('messageError');
+
+            function validateEmail(email) {
+                return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+            }
+
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                let isValid = true;
+
+                [nameError, emailError, messageError].forEach(el => {
+                    el.textContent = '';
+                    el.classList.add('hidden');
+                });
+                formFeedback.classList.add('hidden');
+
+                if (!nameInput.value.trim()) {
+                    nameError.textContent = 'Name is required.';
+                    nameError.classList.remove('hidden');
+                    isValid = false;
+                }
+
+                if (!emailInput.value.trim()) {
+                    emailError.textContent = 'Email is required.';
+                    emailError.classList.remove('hidden');
+                    isValid = false;
+                } else if (!validateEmail(emailInput.value.trim())) {
+                    emailError.textContent = 'Please enter a valid email address.';
+                    emailError.classList.remove('hidden');
+                    isValid = false;
+                }
+
+                if (!messageInput.value.trim()) {
+                    messageError.textContent = 'Message is required.';
+                    messageError.classList.remove('hidden');
+                    isValid = false;
+                }
+
+                if (isValid) {
+                    formFeedback.textContent = 'Thank you! Your message has been sent successfully.';
+                    formFeedback.classList.remove('hidden', 'bg-rose-100', 'text-rose-700', 'dark:bg-rose-950', 'dark:text-rose-300');
+                    formFeedback.classList.add('bg-emerald-100', 'text-emerald-700', 'dark:bg-emerald-950', 'dark:text-emerald-300');
+                    contactForm.reset();
+                } else {
+                    formFeedback.textContent = 'Please check the highlighted fields below.';
+                    formFeedback.classList.remove('hidden', 'bg-emerald-100', 'text-emerald-700', 'dark:bg-emerald-950', 'dark:text-emerald-300');
+                    formFeedback.classList.add('bg-rose-100', 'text-rose-700', 'dark:bg-rose-950', 'dark:text-rose-300');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
